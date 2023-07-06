@@ -11,19 +11,72 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
     </head>
 
-
 <body>
+    <div class="container">
+<!--Hamburger menu html start-->
+        <div class="navbar">
+            <div class="menu">
+                <h3 class="logo">Easy Motion <span>Skin</span></h3>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+<!--Hamburger menu html end-->
 
-<model-viewer alt="Example" 
-src="shared-assets/models/NeilArmstrong.glb" 
-ar environment-image="shared-assets/environments/moon_1k.hdr" 
-poster="shared-assets/models/NeilArmstrong.webp" 
-shadow-intensity="1" 
-camera-controls touch-action="pan-y">
-</model-viewer>
 
+<!--Welcome slide html start-->
+        <div class="main-container">
+            <div class="main">
+                <header>
+                    <div class="overlay">
+                        <h2 class="title">A revolutionary suit for</br>Your personal training</h2>
+                        <a href="#" class="btn">Read more</a>
+                    </div>
+                </header>
+            </div>
+            <div class="shadow one"></div>
+            <div class="shadow two"></div>
+        </div>
+<!--Welcome slide html end-->
+
+        <div class="links">
+            <ul>
+                <li class="active">
+                    <a href="#" style="--i: 0.05s">Home</a>
+                </li>
+                <li>
+                    <a href="#" style="--i: 0.1s">About</a>
+                </li>
+                <li>
+                    <a href="#" style="--i: 0.15s">Contact</a>
+                </li>
+                <li>
+                    <a href="#" style="--i: 0.2s">Service</a>
+                </li>
+                <li>
+                    <a href="#" style="--i: 0.25s">Portfolio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+    <model-viewer class="model"
+    id="bp_model_id_358" 
+    src="https://easymotionskin.com.pl/wp-content/uploads/2022/10/motionskin_web-1.glb" 
+    alt="motionskin_web" camera-controls  loading="auto" 
+    auto-rotate                        >
+    </model-viewer>
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
