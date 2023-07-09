@@ -12,69 +12,40 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
         <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
 
 <body>
-    <div class="container">
-<!--Hamburger menu html start-->
-        <div class="navbar">
-            <div class="menu">
-                <h3 class="logo">Easy Motion <span>Skin</span></h3>
-                <div class="hamburger-menu">
-                    <div class="bar"></div>
-                </div>
-            </div>
+    <div id="navbarContainer">
+        <div id="navbar">
+          <div id="bubbleWrapper">
+            <div id="bubble1" class="bubble"><span class="icon"><i class="fas fa-home"></i></span></div>
+            <div id="bubble2" class="bubble"><span class="icon"><i class="fab fa-twitter"></i></span></div>
+            <div id="bubble3" class="bubble"><span class="icon"><i class="fas fa-bell"></i></span></div>
+            <div id="bubble4" class="bubble"><span class="icon"><i class="fas fa-user"></i></span></div>
+          </div>
+          <div id="menuWrapper">
+            <div id="menu1" class="menuElement" onclick="move('1', '50px', '#ffcc80')"><i class="fas fa-home"></i></div>
+            <div id="menu2" class="menuElement" onclick="move('2', '150px', '#81d4fa')"><i class="fab fa-twitter"></i></div>
+            <div id="menu3" class="menuElement" onclick="move('3', '250px', '#c5e1a5')"><i class="fas fa-bell"></i></div>
+            <div id="menu4" class="menuElement" onclick="move('4', '350px', '#ce93d8')"><i class="fas fa-user"></i></div>
+          </div>
         </div>
-<!--Hamburger menu html end-->
-
-
-<!--Welcome slide html start-->
-        <div class="main-container">
-            <div class="main">
-                <header>
-                    <div class="overlay">
-                        <h2 class="title">A revolutionary suit for</br>Your personal training</h2>
-                        <a href="#" class="btn">Read more</a>
-                    </div>
-                </header>
-            </div>
-            <div class="main-2">
-                <model-viewer alt="Easy Motion Skin 3D" src="images/motionskin_web-1.glb" ar environment-image="images/" poster="images/suite_3_1920x1920.png" shadow-intensity="1" camera-controls 
-                touch-action="pan-y"></model-viewer>
-            </div>
-            <div class="shadow one"></div>
-            <div class="shadow two"></div>
+        <div id="bgWrapper">
+          <div id="bg"></div>
+          <div id="bgBubble"></div>
         </div>
-<!--Welcome slide html end-->
-
-        <div class="links">
-            <ul>
-                <li class="active">
-                    <a href="#" style="--i: 0.05s">Home</a>
-                </li>
-                <li>
-                    <a href="#" style="--i: 0.1s">About</a>
-                </li>
-                <li>
-                    <a href="#" style="--i: 0.15s">Contact</a>
-                </li>
-                <li>
-                    <a href="#" style="--i: 0.2s">Service</a>
-                </li>
-                <li>
-                    <a href="#" style="--i: 0.25s">Portfolio</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
+      </div>
+      
+        <svg width="0" height="0" >
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" id="blurFilter"/>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15" result="goo" />
+              <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+          </defs>
+        </svg>
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
 <script src="js/script.js"></script>
 </body>
