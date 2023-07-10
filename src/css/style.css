@@ -1,122 +1,136 @@
-body {
-    background: #37474f;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    overflow: hidden;
-  }
-  
-  #navbarContainer{
-    width: 400px;
-    min-width: 400px;
-    height: 70vh;
-    background-color: #ffcc80;
-    border-radius: 20px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  }
-  
-  #navbar{
-    width: 100%;
-    height: 60px;
-    background-color: #fff;
-    position: absolute;
-  }
-  
-  #bubbleWrapper{
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    bottom: 25px;
-  }
-  
-  .bubble{
-    background-color: #fff;
-    width: 50px;
-    height: 50px;
-    bottom: 85px;
-    border-radius: 50%;
-    z-index: 1;
-    transform: translateY(120%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .icon{
-    opacity: 0;
-  }
-  
-  #bubble1{
-    transform: translateY(0%);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    > span{
-      opacity: 0.7;
-    }
-  }
-  
-  #bgWrapper{
-    filter: url(#goo);
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    bottom: 60px;
-  }
-  #bg{
-    background-color: #ffcc80;
-    width: 120%;
-    height: 100%;
-    margin-left: -10%;
-  }
-  #bgBubble{
-    position: absolute;
-    background-color: #ffcc80;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    bottom: -50px;
-    left: 50px;
-    transform: translateX(-50%);
-  }
-  
-  #menuWrapper{
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .menuElement{
-    opacity: 0.4;
-    transform: translateY(100%);
-    cursor: pointer;
-    &:hover{
-      opacity: 0.5;
-    }
-  }
-  
-  #contentWrapper{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h2{
-      color: #fff;
-      font-family: sans-serif;
-      font-weight: 400;
-    }
-  }
-  .content{
-    display: none;
-    opacity: 0;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body{
+  background: #ff0031;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper{
+  width: auto;
+  height: 100px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.wrapper ul{
+  display: flex;
+  position: relative;
+}
+
+.wrapper ul li{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper ul li a{
+  color: #c5c5c5;
+  display: block;
+  text-align: center; 
+  padding-top: 15px;
+  transition: 0.5s ease;
+}
+
+.wrapper ul li a span{
+  display: block;
+}
+
+.wrapper ul li a .icon{
+  font-size: 32px;
+}
+
+.wrapper ul li a .text{
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.wrapper ul li.active a{
+  color: #ff0031;
+}
+
+.wrapper .pointer{
+  position: absolute;
+  top: -125px;
+  left: 0px;
+  width: 100px;
+  height: 150px;
+  background: #ff0031;
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+
+.wrapper .pointer:before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 22px;
+  height: 25px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -17px 0 0 #ff0031;
+}
+
+.wrapper .pointer:after{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 22px;
+  height: 25px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0 -17px 0 #ff0031;
+}
+
+.wrapper .pointer .dot{
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.5s ease;
+  transition-delay: 2s;
+}
+
+.wrapper ul li:nth-child(1).active ~ .pointer{
+  transform: translateX(0);
+}
+
+.wrapper ul li:nth-child(2).active ~ .pointer{
+  transform: translateX(100px);
+}
+
+.wrapper ul li:nth-child(3).active ~ .pointer{
+  transform: translateX(200px);
+}
+
+.wrapper ul li:nth-child(4).active ~ .pointer{
+  transform: translateX(300px);
+}
+
+.wrapper ul li:nth-child(5).active ~ .pointer{
+  transform: translateX(400px);
+}
