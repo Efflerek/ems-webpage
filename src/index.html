@@ -1,52 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Easy Motion Skin</title>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    </head>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+     <title> Navigation Menu with Indicator | CodingLab </title> 
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
 
 <body>
-    <div id="navbarContainer">
-        <div id="navbar">
-          <div id="bubbleWrapper">
-            <div id="bubble1" class="bubble"><span class="icon"><i class="fas fa-home"></i></span></div>
-            <div id="bubble2" class="bubble"><span class="icon"><i class="fab fa-twitter"></i></span></div>
-            <div id="bubble3" class="bubble"><span class="icon"><i class="fas fa-bell"></i></span></div>
-            <div id="bubble4" class="bubble"><span class="icon"><i class="fas fa-user"></i></span></div>
-          </div>
-          <div id="menuWrapper">
-            <div id="menu1" class="menuElement" onclick="move('1', '50px', '#ffcc80')"><i class="fas fa-home"></i></div>
-            <div id="menu2" class="menuElement" onclick="move('2', '150px', '#81d4fa')"><i class="fab fa-twitter"></i></div>
-            <div id="menu3" class="menuElement" onclick="move('3', '250px', '#c5e1a5')"><i class="fas fa-bell"></i></div>
-            <div id="menu4" class="menuElement" onclick="move('4', '350px', '#ce93d8')"><i class="fas fa-user"></i></div>
-          </div>
+  
+  <svg style="display: none;">
+    <defs>
+    <g>
+    <path id="icon-menu" d="M2 13.5h49c1.104 0 2-.896 2-2s-.896-2-2-2H2c-1.104 0-2 .896-2 2s.896 2 2 2zM2 28.5h49c1.104 0 2-.896 2-2s-.896-2-2-2H2c-1.104 0-2 .896-2 2s.896 2 2 2zM2 43.5h49c1.104 0 2-.896 2-2s-.896-2-2-2H2c-1.104 0-2 .896-2 2s.896 2 2 2z"/>
+    </g>
+    </defs>
+</svg>
+
+<header>
+
+    <div class="content">
+        <div class="wrapper">
+            <svg class="bla" viewBox="0 0 50 50" width="50px" height="40px">
+                <use xmlns="http://www.w3.org/2000/svg"  xlink:href="#icon-menu"></use>
+            </svg>
+            <h1 class="logo"><a href="#">fullstory</a></h1>
         </div>
-        <div id="bgWrapper">
-          <div id="bg"></div>
-          <div id="bgBubble"></div>
+
+        <div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="#">features</a></li>
+                    <li><a href="#">pricing</a></li>
+                    <li><a href="#">customers</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">company</a></li>
+                    <li><a href="#">support</a></li>
+                </ul>
+            </nav>
+            <div class="actions">
+                <a href="#" class="login">login</a>
+                <a href="#" class="sign-up">sign up free</a>
+            </div>
         </div>
-      </div>
-      
-        <svg width="0" height="0" >
-          <defs>
-            <filter id="goo">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" id="blurFilter"/>
-              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15" result="goo" />
-              <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-            </filter>
-          </defs>
-        </svg>
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
-<script src="js/script.js"></script>
+    </div>
+</header>
+  <script src="js/script.js"></script>
 </body>
 </html>
