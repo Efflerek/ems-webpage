@@ -26,7 +26,7 @@ h1 {
 
 @media (min-width: 450px) {
   h1 {
-    padding-left: 50px;
+    padding-left: 0px;
   }
 }
 
@@ -116,6 +116,72 @@ li a:hover::after {
 nav {
   display: none;
 }
+
+
+.container {
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+}
+
+.diagonal {
+  padding: 50px 0;
+  position: relative;
+  height: 400px;
+ }
+
+ .left-content {
+  width: 80vw;
+  padding-left: 3rem;
+}
+ 
+.stay-home {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-bottom: 0;
+  color: #8b64b4;
+}
+
+.left-content h1{
+  font-weight: 900;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #3b365e;
+}
+
+.para {
+  color: #3b365ecb;
+}
+
+button {
+  border-radius: 25px;
+  background-color: var(--blue);
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  color: var(--white); 
+  cursor: pointer;
+}
+
+.diagonal-1 {
+  position: relative;
+	color: #fff;
+	margin-top: 120px;
+	padding: 50px 0;
+ 	background: #2196F3;
+}
+.diagonal-1:before {
+ 	position: absolute;
+ 	margin-top: -130px;
+ 	content: '';
+ 	border-style: solid;
+	border-width: 0 0 5rem 100vw;
+	border-color: transparent #2196F3 #2196F3 transparent;
+ }
+
+
 
 @media (min-width: 950px) {
   nav {
