@@ -1,70 +1,182 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-  <head>
+<head>
     <meta charset="UTF-8">
-     <title> Easy Motion Skin | Your new way to train</title> 
+    <title> Easy Motion Skin | Your new way to train</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  </head>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+</head>
 
 <body>
 
-  <svg style="display: none;">
-    <defs>
-    <g>
-    <path id="icon-menu" d="M2 13.5h49c1.104 0 2-.896 2-2s-.896-2-2-2H2c-1.104 0-2 .896-2 2s.896 2 2 2zM2 28.5h49c1.104 0 2-.896 2-2s-.896-2-2-2H2c-1.104 0-2 .896-2 2s.896 2 2 2zM2 43.5h49c1.104 0 2-.896 2-2s-.896-2-2-2H2c-1.104 0-2 .896-2 2s.896 2 2 2z"/>
-    </g>
-    </defs>
-</svg>
+    <svg style="display: none;">
+        <defs>
+            <g>
+                <path id="icon-menu"
+                    d="M2 13.5h49c1.104 0 2-.896 2-2s-.896-2-2-2H2c-1.104 0-2 .896-2 2s.896 2 2 2zM2 28.5h49c1.104 0 2-.896 2-2s-.896-2-2-2H2c-1.104 0-2 .896-2 2s.896 2 2 2zM2 43.5h49c1.104 0 2-.896 2-2s-.896-2-2-2H2c-1.104 0-2 .896-2 2s.896 2 2 2z" />
+            </g>
+        </defs>
+    </svg>
 
-<header>
+    <header>
 
-    <div class="content">
-        <div class="wrapper">
-            <svg class="bla" viewBox="0 0 50 50" width="50px" height="40px">
-                <use xmlns="http://www.w3.org/2000/svg"  xlink:href="#icon-menu"></use>
-            </svg>
-            <h1 class="logo"><a href="#">Easy Motion</a></h1>
+        <div class="content">
+            <div class="wrapper">
+                <svg class="bla" viewBox="0 0 50 50" width="50px" height="40px">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-menu"></use>
+                </svg>
+                <h1 class="logo"><a href="#">Easy Motion</a></h1>
+            </div>
+
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="#">How it works?</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Home Edition</a></li>
+                        <li><a href="#">Studio Edition</li>
+                        <li><a href="#">Blog</li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </nav>
+                <div class="actions">
+                    <a href="#" class="sign-up">Free Consultation</a>
+                </div>
+            </div>
+
         </div>
 
-        <div class="nav-wrapper">
-            <nav>
-                <ul>
-                    <li><a href="#">How it works?</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Home Edition</a></li>
-                    <li><a href="#">Studio Edition</li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </nav>
-            <div class="actions">
-                <a href="#" class="sign-up">Free Consultation</a>
+    </header>
+    <section id="Welcome-3D" class="diagonal">
+        <div class="container">
+            <div class="left-content">
+                <p class="stay-home">Build Your Muscles With Our Suit</p>
+                <h1>The Easier Way to Better Shape</h1>
+
+                <p class="text">
+                    That's what we need right now. Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Aliquam, corporis.
+                </p>
+                <div class="wrap">
+                    <button class="button">Free Consultation</button>
+                </div>
+                <div class="right-content">
+                    <model-viewer src="images/motionskin_web-1.glb" ar ar-modes="webxr scene-viewer quick-look"
+                        camera-controls poster="images/suite_3_1920x1920.png"
+                        shadow-intensity="1" autoplay>
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                    </model-viewer>
+                </div>
+            </div>
+    </section>
+
+    <section id="How-it-works" class="diagonal">
+        <div class="container">
+            <div class="left-content">
+                <img src="">
+            </div>
+            <div class="right-content">
+                <h2>How it works?</h2>
+                <p class="text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus nisi
+                    maximus, pharetra
+                    nulla finibus, efficitur mi. Phasellus at ligula quis nunc varius rhoncus. Sed vitae justo at nisl
+                </p>
             </div>
         </div>
-    </div>
-</header>
-    <section class="diagonal">
+    </section>
+
+
+
+    <section id="Explanation" class="diagonal">
+        <div class="container">
+            <div class="left-content">
+                <img src="">
+            </div>
+            <div class="right-content">
+                <h2>Explanation</h2>
+                <p class="text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus nisi
+                    maximus, pharetra
+                    nulla finibus, efficitur mi. Phasellus at ligula quis nunc varius rhoncus. Sed vitae justo at nisl
+                    ornare fermentum at sit amet leo. Donec lobortis elementum faucibus. Vestibulum tempor nec justo in
+                    iaculis. Duis tellus mauris, consequat vel dolor sed, volutpat sollicitudin enim. Maecenas velit
+                    dolor, efficitur sagittis interdum ac, pellentesque et velit. Nulla odio erat, pharetra non posuere
+                    id, sollicitudin sed erat. Nulla vitae est ligula. Ut aliquam porta orci. Nulla faucibus leo in
+                    sapien finibus, vel egestas lorem varius.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Shop" class="diagonal">
         <div class="container">
             <div class="left-content">
                 <p class="stay-home">Stay Home!!</p>
                 <h1>Be a good Easter egg.</h1>
                 <p></p>
-                <p class="para">
-                  That's what we need right now. Lorem ipsum dolor sit amet consectetur,
-                  adipisicing elit. Aliquam, corporis.
+                <p class="text excluded">
+                    That's what we need right now. Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Aliquam, corporis.
                 </p>
-                <button>Save Lifes</button>
-              </div>
+                <div type="button" class="sign-up">Save Lifes</button>
+                </div>
+                <div class="right-content">
+                    <img src="">
+                </div>
+            </div>
+    </section>
+
+    <section id="Home Edition" class="normal-div dark">
+        <div class="left-content">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-H6zWXJbVRo"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <div class="right-content">
+            <h2>Home Edition</h2>
+            <p class="text white">
+            </p>
+        </div>
         </div>
     </section>
-    <section class="diagonal-1">
-        <div class="container">
-        <h1>Digaonal Section</h1>  
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus nisi maximus, pharetra nulla finibus, efficitur mi. Phasellus at ligula quis nunc varius rhoncus. Sed vitae justo at nisl ornare fermentum at sit amet leo. Donec lobortis elementum faucibus. Vestibulum tempor nec justo in iaculis. Duis tellus mauris, consequat vel dolor sed, volutpat sollicitudin enim. Maecenas velit dolor, efficitur sagittis interdum ac, pellentesque et velit. Nulla odio erat, pharetra non posuere id, sollicitudin sed erat. Nulla vitae est ligula. Ut aliquam porta orci. Nulla faucibus leo in sapien finibus, vel egestas lorem varius.
+
+    <section id="Explanation-1" class="diagonal">
+        <div class="left-content">
+            <img src="">
+        </div>
+        <div class="right-content">
+            <h2>Explanation</h2>
+            <p class="text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus nisi
+                maximus, pharetra
+                nulla finibus, efficitur mi. Phasellus at ligula quis nunc varius rhoncus. Sed vitae justo at nisl
+                ornare fermentum at sit amet leo. Donec lobortis elementum faucibus. Vestibulum tempor nec justo in
+                iaculis. Duis tellus mauris, consequat vel dolor sed, volutpat sollicitudin enim. Maecenas velit
+                dolor, efficitur sagittis interdum ac, pellentesque et velit. Nulla odio erat, pharetra non posuere
+                id, sollicitudin sed erat. Nulla vitae est ligula. Ut aliquam porta orci. Nulla faucibus leo in
+                sapien finibus, vel egestas lorem varius.
+            </p>
+        </div>
+        </div>
+    </section>
+
+    <section id="Contact" class="normal-div dark">
+        <div class="left-content"></div>
+        <h2>Contact</h2>
+        <p class="text white">
         </p>
         </div>
-     </section>
-  <script src="js/script.js"></script>
+        <div class="right-content">
+
+            <img src="">
+        </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
