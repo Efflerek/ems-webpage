@@ -252,6 +252,12 @@ nav.open {
   color: black;
 }
 
+.couple {
+  margin-top: 5rem;
+  margin-left: 3rem;
+  width: 15rem;
+}
+
 .text {
   color: black;
 }
@@ -354,8 +360,8 @@ header {
 .cover:before {
   content: '';
   position: absolute;
-  border: 5px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   top: 20px;
   left: 20px;
   right: 20px;
@@ -393,34 +399,27 @@ header {
 .gallery-title {
   font-weight: 600;
   position: absolute;
-  bottom: 55px;
-  left: 50px;
+  bottom: 0.5rem;
+  left: 3rem;
   color: white;
   transform-style: preserve-3d;
   transition: ease all 2.3s;
   z-index: 3;
-  font-size: 3em;
+  font-size: 2rem;
   transform: translateZ(0px);
 }
-
-.price {
-  font-weight: 200;
-  position: absolute;
-  top: 55px;
-  right: 50px;
-  color: white;
-  transform-style: preserve-3d;
-  transition: ease all 2.3s;
-  z-index: 4;
-  font-size: 2em;
-  transform: translateZ(0px);
+.gallery-title.first{
+  bottom: 0.5rem;
+  left: 2rem;
 }
 
 .card-back {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #0b0f08;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   transform-style: preserve-3d;
   transition: ease all 2.3s;
   transform: translateZ(-1px);
@@ -429,8 +428,48 @@ header {
   justify-content: center;
 }
 
+.card-back a {
+  transform-style: preserve-3d;
+  transition: ease transform 2.3s, ease background 0.5s;
+  transform: translateZ(-1px) rotatey(-180deg);
+  background: #4D77FF;
+  background-image: linear-gradient(90deg, #4D77FF 0%, var(--e-global-color-9c764db) 100%);
+  opacity: 100%;
+  border: 0px solid white;
+  font-weight: 200;
+  font-size: 1rem;
+  color: white;
+  padding: 1rem;
+  margin: 1rem 1rem;
+  outline: none;
+  text-decoration: none;
+}
+
+.card-back.a {
+  background-image: url("/src/images/endurance-higher.jpg");
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+
+}
+
+.card-back.b {
+  background-image: url("/src/images/strength-higher.jpg");
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+}
+
+.card-back.c {
+  background-image: url("/src/images/calories-burned.jpg");
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+}
+
 .gallery-item:hover .cover:before {
   transform: translateZ(30px);
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
 }
 
 .gallery-item:hover .cover:after {
@@ -448,25 +487,6 @@ header {
 .gallery-item:hover a {
   transform: translateZ(-60px) rotatey(-180deg);
 }
-
-.card-back a {
-  transform-style: preserve-3d;
-  transition: ease transform 2.3s, ease background 0.5s;
-  transform: translateZ(-1px) rotatey(-180deg);
-  background: transparent;
-  border: 1px solid white;
-  font-weight: 200;
-  font-size: 1.3em;
-  color: white;
-  padding: 14px 32px;
-  outline: none;
-  text-decoration: none;
-}
-
-.card-back a:hover {
-  background-color: white;
-  color: #0b0f08;
-} 
 
 /* Grid */
 
