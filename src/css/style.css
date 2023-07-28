@@ -257,6 +257,10 @@ nav.open {
   margin-top: 5rem;
   margin-left: 3rem;
   width: 15rem;
+  object-fit:cover;
+  -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
+  transform-origin:center;
+  transition:0.5s;
 }
 
 .text {
@@ -285,9 +289,13 @@ nav.open {
   padding: 3rem 0;
 }
 
+.div-contact {
+  padding: 3rem 0rem 0 0;
+}
+
 /* Carousel */
 
-img {
+ .img-persp {
   width: 30%;
   height: 100%;
   object-fit:cover;
@@ -529,75 +537,88 @@ header {
   z-index: 0;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .card {
-  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  margin: 2rem;
   width: 15rem;
   height: 15rem;
   border-radius: 40px;
-  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
-  background-size: cover;
+  background: #4D77FF;
+  background-image: linear-gradient(90deg, #4D77FF 0%, var(--e-global-color-9c764db) 100%);
   background-position: center;
   background-repeat: no-repeat;
-box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
   transition: 0.4s;
 }
 
-
 .card .card_image {
-  width: inherit;
-  height: inherit;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically center the image */
+  width: 100%;
   border-radius: 40px;
+  overflow: hidden; /* Ensure the image is clipped within the border radius */
 }
 
-.card .card_image img {
-  width: inherit;
-  height: inherit;
+.card_image img {
+  height: 100%;
+  width: 50%;
   border-radius: 40px;
   object-fit: cover;
 }
 
-.card .card_title {
+.card_title {
+  width: 80%; /* Take the full width of the card */
   text-align: center;
-  border-radius: 0px 0px 40px 40px;
+  justify-content: center;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 30px;
-  margin-top: -5rem;
-  height: 40px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 1rem; /* Adjust the spacing between image and title */
+  color: black;
 }
 
 .card:hover {
   transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
 }
 
-.title-white {
-  color: white;
-}
-
-.title-black {
-  color: black;
-}
 
 /* testimonials */
+
+.testimonials-headline {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+  margin right: 3rem;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: row-start;
+  grid-row-end: 5;
+  width: 100%;
+}
+
 .testimonials {
-  margin: 200px auto 100px;
+  margin: 1rem auto 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 30px;
 }
 
 .testimonials .testimonial-card {
   position: relative;
-  width: 350px;
-  margin: 0 auto;
-  background: #333;
+  width: 20rem;
+  margin: 1rem 3rem;
+  background: #4D77FF;
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
@@ -613,7 +634,7 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
   left: 0;
   background: linear-gradient(#03a9f4, #e81dd3);
   z-index: 1;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .testimonials .testimonial-card:hover .layer {
@@ -628,10 +649,16 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
 .testimonials .testimonial-card .cardcontent p {
   font-size: 18px;
   line-height: 24px;
-  color: #fff;
+  color: black;
+  font-weight: 500;
+  transition: 1s;
 }
 
-.testimonials .testimonial-card .cardcontent .image {
+.testimonials .testimonial-card:hover .cardcontent p {
+color: white;
+}
+
+.testimonials .testimonial-card .cardcontent .image img {
   width: 100px;
   height: 100px;
   margin: 0 auto;
@@ -646,13 +673,13 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
 }
 
 .testimonials .testimonial-card .cardcontent .details h2 span {
-  color: #03a9f4;
+  color: black;
   font-size: 12px;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .testimonials .testimonial-card:hover .cardcontent .details h2 span {
-  color: #fff;
+  color: white;
 }
 
 /**Contact**/
@@ -767,6 +794,7 @@ h2 {
 .left-wrapper {
   display: flex;
   flex: 1;
+  margin: 0 auto;
   height: 480px;
   justify-content: center;
   align-items: center;
@@ -774,9 +802,12 @@ h2 {
 }
 
 .left-inner-wrapper {
-  height: 50%;
-  width: 80%;
+  margin-top: 3rem;
+  height: 100%;
+  width: 50%;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   line-height: 22px;
 }
 
