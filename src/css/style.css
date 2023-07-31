@@ -238,7 +238,7 @@ nav.open {
   padding-right: 3rem;
 }
 
-.stay-home {
+.tagline {
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
@@ -246,7 +246,7 @@ nav.open {
   color: #0060bd;
 }
 
-.tagline {
+.tagline.white {
   color: white;
 }
 
@@ -371,6 +371,12 @@ header {
 .benefits { 
   padding-top: 3rem;
 }
+
+.benefits-headline {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .gallery {
   display: flex;
   flex-direction: row;
@@ -600,7 +606,7 @@ header {
 /* testimonials */
 
 .testimonials-headline {
-  margin-top: 3rem;
+  margin-top: 7rem;
   margin-bottom: 1rem;
   margin-left: 3rem;
   margin right: 3rem;
@@ -610,6 +616,11 @@ header {
   grid-row-start: row-start;
   grid-row-end: 5;
   width: 100%;
+}
+
+.testimonials-div {
+  margin-top: 3rem;
+  height: 40rem;
 }
 
 .testimonials {
@@ -688,6 +699,7 @@ color: white;
 }
 
 /**Contact**/
+
 .contact-info {
   width: 100%;
   display: flex;
@@ -698,7 +710,7 @@ color: white;
 .tabcard {
   position: relative;
   flex: 1;
-  max-width: 300px;
+  width: 200px;
   height: 140px;
   background-color: #444;
   margin: 20px;
@@ -729,26 +741,26 @@ color: white;
 }
 
 .tab-content h3 {
-  top: 20px;
+  top: 5px;
   text-transform: uppercase;
   color: #ea8685;
 }
 
 .tab-content span {
-  bottom: 20px;
+  bottom: 5px;
   color: #fff;
   font-weight: 500;
 }
 
 .tabcard:hover h3 {
   opacity: 1;
-  top: 46px;
+  top: 10px;
   transition: .3s linear .3s;
 }
 
 .tabcard:hover span {
   opacity: 1;
-  bottom: 46px;
+  bottom: 10px;
   transition: .3s linear .3s;
 }
 
@@ -770,7 +782,9 @@ color: white;
   min-height: 480px;
   min-width: 370px;
   max-width: 100%;
-  margin: 0 0;
+  height: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0;
 }
 
 .left-wrapper h2 {
@@ -792,19 +806,15 @@ color: white;
   background-color: #4D77FF;
   display: flex;
   flex: 1;
-  margin: 3rem 2rem 3rem 3rem;
+  margin: 3rem 0rem 3rem 3rem;
   width: 50%;
-  justify-content: center;
-  align-items: center;
   color: #ffffff;
 }
 
 .left-inner-wrapper {
-  flex: 2;  
-  margin: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  text-align: center;
-  justify-content: center;
   align-items: center;
   line-height: 22px;
 }
@@ -819,20 +829,17 @@ color: white;
 }
 
 .right-inner-wrapper {
-  margin-top: 2rem;
   flex: 1; /* Allow the .right-inner-wrapper to take remaining vertical space */
   display: flex;
   flex-direction: column; /* Set the flex direction to column */
   justify-content: center;
   align-items: center;
-  margin: 3rem 1rem;
 }
-
-.r-inner-wrapper-title {
+.right-inner-wrapper h2 {
+margin-top: 0;
 }
 
 .form {
-
   background-color: white;
   flex: 2;
 }
