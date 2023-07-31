@@ -295,6 +295,10 @@ nav.open {
   padding: 3rem 0;
 }
 
+.normal-div.blue {
+background-color: #4D77FF;
+}
+
 .div-contact {
   padding: 0rem 0rem 0 0;
 }
@@ -817,3 +821,270 @@ input:focus,
 textarea:focus {
   outline: 1px solid #00b4cf;
 }
+
+/*Contact page*/
+/*Consultation-form*/
+.normal-div.blue.consultation-div {
+  display: flex;
+  padding-top: 1%;
+  max-height: 55rem;
+  justify-content: space-between;
+  padding: 3rem 0 0 0;
+}
+
+.normal-div.blue.tabs-div {
+  display: absolute;;
+  max-height: 9rem;
+}
+
+.get-consultation {
+  margin: 5rem;
+  display: flex;
+  background-color: transparent;
+}
+
+.consultation-form {
+  flex: 1;
+  background-color: #f0f0f0; /* 0.7 sets the alpha value to 70% opaque */
+  border-radius: 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Set the alpha value here */
+  padding: 3rem;
+  max-width: 35rem;
+  width: 100%;
+}
+
+.get-consultation-text {
+  flex: 2;
+}
+
+.consultation-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.consultation-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.consultation-form .form-floating {
+  position: relative;
+}
+
+.consultation-form .form-floating input {
+  border: none;
+  border-radius: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.form-floating label {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  pointer-events: none;
+  transition: 0.2s;
+  font-size: 16px;
+  color: #777;
+}
+
+.form-floating input:focus + label,
+.form-floating input:not(:placeholder-shown) + label {
+  top: -20px;
+  left: 0;
+  background-color: #fff;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #3498db;
+}
+
+.cons-sub {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.5);
+  animation: pulse 2s infinite;
+}
+
+.cons-sub:hover {
+  background-color: #2980b9;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
+
+/*Contact Active Tabs - Contact Page*/
+
+.tabcard.tab-contact {
+  position: relative;
+  display: inline-block;
+  width: 10rem;
+  height: 10rem;
+  top: 1rem;
+  padding: 0;
+  margin: 0 5rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  background-image: linear-gradient(135deg, #ff7f7f, #ff3737);
+  box-shadow: 0 4px 8px rgba(234, 134, 133, 0.2);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tabcard.tab-contact:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(234, 134, 133, 0.2);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.tabcard.tab-contact:hover:before {
+  transform: scaleX(1);
+  transition-delay: 0.5s;
+}
+
+.tabcard.tab-contact svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.tabcard.tab-contact:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.tabcard.tab-contact p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600; /* Increased font weight for better visibility */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Added subtle text shadow */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tabcard.tab-contact:hover {
+  animation: pulse 1s infinite;
+}
+
+/*Articles*/
+
+.normal-div.blog {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.article {
+  margin: 1rem;
+  max-width: 30rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-header img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.article-body {
+  padding: 1rem;
+}
+
+.tag {
+  background-color: #2F80ED;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.75rem;
+}
+
+.article-body h4 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.article-footer {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-info {
+  margin-left: 1rem;
+}
+
+.user-info h5 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.user-info small {
+  color: #666;
+  font-size: 0.75rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .normal-div .article {
+    max-width: 100%;
+  }
+}
+
