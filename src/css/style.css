@@ -27,6 +27,14 @@ h1 {
   margin: 0;
 }
 
+h1.white {
+  color: white;
+}
+
+h2.white {
+  color: white;
+}
+
 .logo {
   margin-left: 3.5rem;
 }
@@ -189,12 +197,6 @@ nav.open {
   height: 33rem;
 }
 
-/* Container */
-.container {
-  max-width: 100rem;
-  margin: 3rem 3rem;
-}
-
 /* Diagonals */
 .diagonal {
   padding: 3rem 0;
@@ -294,7 +296,7 @@ nav.open {
 }
 
 .div-contact {
-  padding: 3rem 0rem 0 0;
+  padding: 0rem 0rem 0 0;
 }
 
 /* Carousel */
@@ -707,13 +709,21 @@ color: white;
   flex-wrap: wrap;
 }
 
+.contact-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1rem;
+}
+
 .tabcard {
   position: relative;
   flex: 1;
-  width: 200px;
+  width: 180px;
   height: 140px;
   background-color: #444;
-  margin: 20px;
+  margin: 0.5rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -773,71 +783,20 @@ color: white;
 }
 
 /*Contact form*/
-.main-wrapper {
-  background-color: #4D77FF;
-  border-radius: 5px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  position: relative;
-  overflow: hidden;
-  min-height: 480px;
-  min-width: 370px;
-  max-width: 100%;
+.diagonal.blue {
+  height: 40rem;
+  width: 100%;
   height: 100%;
-  margin: 0 0 0 0;
+  background-color: #4D77FF;
+  display: flex;
+  flex-direction: row;
+  padding: 0rem 0;
+}
+
+.diagonal.blue .left-content h2.white .text.white {
+  margin: 0 0;
   padding: 0 0;
-}
-
-.left-wrapper h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.right-wrapper h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.form-wrapper {
-  display: flex;
-  background-color: #4D77FF;
-}
-
-.left-wrapper {
-  background-color: #4D77FF;
-  display: flex;
-  flex: 1;
-  margin: 3rem 0rem 3rem 3rem;
-  width: 50%;
-  color: #ffffff;
-}
-
-.left-inner-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  align-items: center;
-  line-height: 22px;
-}
-
-.right-wrapper {
-  display: flex;
-  background-color: #4D77FF;
-  flex-direction: column; /* Set the flex direction to column */
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-}
-
-.right-inner-wrapper {
-  flex: 1; /* Allow the .right-inner-wrapper to take remaining vertical space */
-  display: flex;
-  flex-direction: column; /* Set the flex direction to column */
-  justify-content: center;
-  align-items: center;
-}
-.right-inner-wrapper h2 {
-margin-top: 0;
-}
+  }
 
 .form {
   background-color: white;
