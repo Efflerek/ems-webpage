@@ -40,6 +40,38 @@ h2.white {
 }
 
 /* Actions */
+
+.button-white {
+  align-items: center;
+  justify-content: center;
+  background-color: #FB6E6E;
+  color: white;
+  margin-left: 1rem;
+  padding: 0.3rem 0.3rem;
+  border: none;
+  border-radius: 3rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-white:hover {
+  background-color: #00509c;
+}
+
+/* If you want to add a box-shadow on hover */
+.button-white:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* If you want to add a subtle animation on click */
+.button-white:active {
+  transform: scale(0.95);
+}
+
 .actions {
   text-align: center;
   padding: 2rem 0;
@@ -252,6 +284,10 @@ nav.open {
   color: white;
 }
 
+.tagline.black {
+  color: black;
+}
+
 .left-content h1 {
   font-weight: 900;
   font-size: 2.5rem;
@@ -285,6 +321,7 @@ nav.open {
 
 /* Normal Div */
 .normal-div {
+  margin: 1 rem;
   height: 50rem;
   position: relative;
   display: flex;
@@ -376,9 +413,11 @@ header {
 
 .benefits { 
   padding-top: 3rem;
+  margin: 1rem;
 }
 
-.benefits-headline {
+.benefits-headline .blog-headline .opinion-headline {
+  margin: 0;
   padding-left: 3rem;
   padding-right: 3rem;
 }
@@ -624,9 +663,10 @@ header {
   width: 100%;
 }
 
+
 .testimonials-div {
   margin-top: 3rem;
-  height: 40rem;
+  height: 35rem;
 }
 
 .testimonials {
@@ -745,6 +785,12 @@ color: white;
   opacity: 0;
 }
 
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .tab-content h3,
 .tab-content span {
   position: absolute;
@@ -788,13 +834,20 @@ color: white;
 
 /*Contact form*/
 .diagonal.blue {
+  display: flex;
+  flex-direction: row;
   height: 40rem;
   width: 100%;
   height: 100%;
   background-color: #4D77FF;
-  display: flex;
-  flex-direction: row;
-  padding: 0rem 0;
+  padding: 0 0;
+  margin-top: 1rem;
+}
+
+
+.diagonal.blue.shop-adv {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
 }
 
 .diagonal.blue .left-content h2.white .text.white {
@@ -806,6 +859,7 @@ color: white;
   background-color: white;
   flex: 2;
 }
+
 
 input,
 textarea {
@@ -826,11 +880,15 @@ textarea:focus {
 /*Consultation-form*/
 .normal-div.blue.consultation-div {
   display: flex;
-  padding-top: 1%;
   max-height: 55rem;
   justify-content: space-between;
-  padding: 3rem 0 0 0;
+  padding: 0rem 0 0 0;
 }
+
+.contact-form { 
+  padding-top: 1.5rem;
+}
+
 
 .normal-div.blue.tabs-div {
   display: absolute;;
@@ -838,9 +896,27 @@ textarea:focus {
 }
 
 .get-consultation {
-  margin: 5rem;
+  margin: 3rem 5rem 5rem 5rem;
   display: flex;
   background-color: transparent;
+}
+
+.get-consultation-text {
+  flex: 2;
+  position: absolute; /* Set the position to absolute for the text div */
+  top: 5rem; /* Position it at the top of the container */
+  left: 45rem; /* Optionally, align it to the left edge of the container */
+  width: 45%; /* Optionally, set the width to span the entire container */ 
+  text-align: left; /* Optionally, center the text horizontally */
+  padding: 1rem 3rem;
+  font-size: 110%;
+}
+
+.align {
+  display: block;
+  margin-top: 1rem;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .consultation-form {
@@ -848,13 +924,9 @@ textarea:focus {
   background-color: #f0f0f0; /* 0.7 sets the alpha value to 70% opaque */
   border-radius: 3rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Set the alpha value here */
-  padding: 3rem;
+  padding: 1rem 2rem 3rem 3rem;
   max-width: 35rem;
   width: 100%;
-}
-
-.get-consultation-text {
-  flex: 2;
 }
 
 .consultation-form h2 {
@@ -865,7 +937,7 @@ textarea:focus {
 .consultation-form form {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .consultation-form .form-floating {
@@ -882,6 +954,8 @@ textarea:focus {
 }
 
 .form-floating label {
+  font-weight: bold;
+  color: #4D77FF;
   position: absolute;
   top: 0;
   left: 10px;
@@ -933,13 +1007,21 @@ textarea:focus {
 
 /*Contact Active Tabs - Contact Page*/
 
+.fa-solid {
+  display: relative;
+  /*justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 3rem;*/
+}
+
 .tabcard.tab-contact {
   position: relative;
   display: inline-block;
   width: 10rem;
   height: 10rem;
   top: 1rem;
-  padding: 0;
+  padding: 3rem;
   margin: 0 5rem;
   border-radius: 1.5rem;
   cursor: pointer;
@@ -986,7 +1068,7 @@ textarea:focus {
 .tabcard.tab-contact p {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: centetr;
   color: white;
   font-size: 18px;
   font-weight: 600; /* Increased font weight for better visibility */
@@ -1013,20 +1095,38 @@ textarea:focus {
 /*Articles*/
 
 .normal-div.blog {
+  height: 31rem;
+  margin: 0rem 3rem 1rem 1rem;
   display: flex;
   max-width: 100%;
   flex-direction: column;
 }
 
-.box {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+
+.blog-headline {
+margin-top: 7rem;
+margin-bottom: 0;
+margin-left: 3rem;
 }
 
+.opinion-headline {
+margin-top: 4rem;
+margin-bottom: 0;
+margin-left: 3rem;
+}
+
+.box {
+    height: 26rem;
+    display: flex;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    padding: 0;
+    flex-direction: row;
+  }
+
 .article {
-  margin: 1rem;
-  max-width: 30rem;
+  margin: 0rem 2rem 1rem 1rem;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
