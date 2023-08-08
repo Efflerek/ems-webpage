@@ -288,6 +288,12 @@ nav.open {
   color: black;
 }
 
+.tagline.black.small {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .left-content h1 {
   font-weight: 900;
   font-size: 2.5rem;
@@ -311,6 +317,7 @@ nav.open {
 
 .text.white {
   color: #fff;
+  line-height: 1.5rem;
 }
 
 .right-content {
@@ -1181,10 +1188,22 @@ margin-left: 3rem;
   font-size: 0.75rem;
 }
 
+/* Home Edition Styles */
+.right-content.welcome-he {
+height: 100%;
+background-image: url("/src/images/easymotionskin-homeedition.jpg");
+background-color: #cccccc;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .normal-div .article {
     max-width: 100%;
   }
 }
+
+
 
