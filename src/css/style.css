@@ -339,6 +339,35 @@ nav.open {
   padding: 3rem 0;
 }
 
+.row-div {
+  height: 40rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column-div {
+  height: 20rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column-div.photo {
+  display: flex;
+  flex: 1;
+}
+.column-div.headline {
+  display: flex;
+  flex: 2;
+}
+
 .normal-div.blue {
 background-color: #4D77FF;
 }
@@ -375,6 +404,10 @@ background-color: #4D77FF;
 .img-slider img:hover {
   transform:perspective(800px) rotateY(0deg);
   opacity:1;
+}
+
+.img-elements {
+  height: 20rem;
 }
 
 /* Content */
@@ -890,6 +923,10 @@ textarea:focus {
   max-height: 55rem;
   justify-content: space-between;
   padding: 0rem 0 0 0;
+}
+
+.bckg.blue {
+  background-color:#4D77FF;
 }
 
 .contact-form { 
