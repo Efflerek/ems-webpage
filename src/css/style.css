@@ -340,39 +340,6 @@ nav.open {
   padding: 3rem 0;
 }
 
-.elements-small {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.elements-small h3 {
-  display: inline-block;
-  background: linear-gradient(to right, #b33e96, #f3854e);
-  border-radius: 1.25rem;
-  padding: 0.5rem 1rem;
-  box-shadow: 0 0.0625rem 0.1875rem #2e2e2e;
-}
-
-.column-div {
-  height: 20rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.column-div.photo {
-  display: flex;
-  flex: 1;
-}
-
-.column-div.headline {
-  display: flex;
-  flex: 2;
-}
-
 .normal-div.blue {
   background-color: #4D77FF;
 }
@@ -412,7 +379,7 @@ nav.open {
 }
 
 .img-elements {
-  height: 18rem;
+  height: 19rem;
 }
 
 /* Content */
@@ -461,12 +428,21 @@ header {
 .elements {
   padding-top: 3rem;
   margin: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.elements {
+  display: flex;
+  margin-bottom: 3rem;
+  padding-top: 1rem;
 }
 
 .benefits-headline,
 .blog-headline,
 .opinion-headline,
-.elements-headline {
+.elements-headline,
+.functions-headline {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -477,13 +453,23 @@ header {
   padding-right: 3rem;
 }
 
-.elements-headline {
+.elements-headline, .functions-headline {
   margin-left: 2rem;
+}
+
+.elements h3 {
+  margin-block-start: 0;
+  background: linear-gradient(to right, #b33e96, #f3854e);
+  border-radius: 1.25rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0.0625rem 0.1875rem #2e2e2e;
+  DISPLAY: inline-block;
+
 }
 
 .app-functions-headline {
   padding-top: 2rem;
-  padding-left: 2rem;
+  margin-left: 2rem;
 }
 
 .gallery {
@@ -958,8 +944,7 @@ textarea:focus {
 
 .bckg.blue {
   background-color: #4D77FF;
-  margin: 0;
-  padding: 0;
+  margin-top: 2rem;
 }
 
 .contact-form {
@@ -1211,21 +1196,21 @@ textarea:focus {
   padding-top: 0;
   margin-top: 0;
   margin-bottom: 3rem;
-  padding: 0;
   flex-direction: row;
 }
 
 .row-div {
   height: 30rem;
-  justify-content: center;
-  align-items: center;
+  margin: 1rem 0rem 2rem;
+
 }
 
 .article {
-  margin: 0rem 2rem 1rem 1rem;
+  margin: 0rem 1rem 1rem 1rem;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 31%;
 }
 
 .article-header img {
@@ -1333,6 +1318,7 @@ textarea:focus {
   background-color: #fff;
   color: #444;
 }
+
 .grid-app-functions-2 {
   display: grid;
   grid-template-columns: 8rem 8rem 8rem 8rem;
