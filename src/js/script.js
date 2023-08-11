@@ -18,3 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+$("#cookie-popup button").click(function() {
+  $("#cookie-popup").fadeOut();
+});
