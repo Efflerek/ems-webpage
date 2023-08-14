@@ -1,25 +1,37 @@
-// Poczekaj, aż dokument HTML zostanie w pełni załadowany
+//* MENU WRAPPER **//
+// Get the SVG and dropdown elements
+const svgIcon = document.querySelector('.bla');
+const dropdownMenu = document.querySelector('.nav-wrapper');
+
+// Add a click event listener to the SVG icon
+svgIcon.addEventListener('click', function () {
+    // Toggle the visibility of the dropdown menu
+    dropdownMenu.classList.toggle('show-menu');
+});
+
+//*MODEL 3D*/
+// Wait for the HTML document to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
-  // Znajdź wszystkie wystąpienia komponentu Model Viewer na stronie
+  // Find all occurrences of the Model Viewer component on the page
   const modelViewers = document.querySelectorAll('model-viewer');
 
-  // Iteruj przez każdy komponent Model Viewer
+  // Iterate through each Model Viewer component
   modelViewers.forEach(function (modelViewer) {
-    // Sprawdź, czy komponent jest załadowany
+    // Check if the component is loaded
     modelViewer.addEventListener('load', function () {
-      // Wykonaj dowolne czynności po załadowaniu modelu
-      console.log('Model został załadowany!');
+      // Perform any actions after the model is loaded
+      console.log('Model has been loaded!');
     });
 
-    // Sprawdź, czy wystąpił błąd podczas ładowania modelu
+    // Check if an error occurred during model loading
     modelViewer.addEventListener('error', function (event) {
-      // Wyświetl komunikat o błędzie
-      console.error('Wystąpił błąd podczas ładowania modelu:', event);
+      // Display an error message
+      console.error('An error occurred during model loading:', event);
     });
   });
 });
 
-/*COOKIE POLICY */
+/* COOKIE POLICY */
 $(document).ready(function() {
   // Check if the session cookie is set
   if (document.cookie.indexOf('cookiePolicyAccepted=true') === -1) {
@@ -28,7 +40,7 @@ $(document).ready(function() {
   }
 
   $("#cookie-popup button").click(function() {
-    // Set a session cookie to remember user's choice
+    // Set a session cookie to remember the user's choice
     document.cookie = 'cookiePolicyAccepted=true; path=/';
     
     // Hide the cookie policy popup
@@ -36,7 +48,7 @@ $(document).ready(function() {
   });
 });
 
-/*SEND FORM*/
+/* SEND FORM */
 $(document).ready(function() {
   $('#contact-form').submit(function(e) {
       e.preventDefault();
@@ -56,3 +68,31 @@ $(document).ready(function() {
       });
   });
 });
+
+/* Max number of words */
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all elements with the class "article"
+  const articles = document.querySelectorAll('.article-body');
+
+  // Define the maximum number of words to display
+  const maxWords = 25;
+
+  // Loop through each article
+  articles.forEach(article => {
+    // Find the <p> element within the article
+    const paragraph = article.querySelector('p');
+    
+    // Check if the paragraph exists
+    if (paragraph) {
+      // Split the text into words
+      const words = paragraph.textContent.trim().split(' ');
+        
+      // Limit the number of words if it exceeds the maximum
+      if (words.length > maxWords) {
+        const truncatedText = words.slice(0, maxWords).join(' ') + '...';
+        paragraph.textContent = truncatedText;
+      }
+    }
+  });
+});
+
