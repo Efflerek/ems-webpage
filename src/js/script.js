@@ -1,4 +1,4 @@
-//* MENU WRAPPER **//
+// MENU WRAPPER
 // Get the SVG and dropdown elements
 const svgIcon = document.querySelector('.bla');
 const dropdownMenu = document.querySelector('.nav-wrapper');
@@ -9,7 +9,7 @@ svgIcon.addEventListener('click', function () {
     dropdownMenu.classList.toggle('show-menu');
 });
 
-//*MODEL 3D*/
+// MODEL 3D
 // Wait for the HTML document to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
   // Find all occurrences of the Model Viewer component on the page
@@ -31,45 +31,61 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-/* COOKIE POLICY */
-$(document).ready(function() {
+// COOKIE POLICY
+document.addEventListener('DOMContentLoaded', function() {
   // Check if the session cookie is set
   if (document.cookie.indexOf('cookiePolicyAccepted=true') === -1) {
     // Cookie policy not accepted, show the popup
-    $("#cookie-popup").fadeIn();
+    var cookiePopup = document.getElementById('cookie-popup');
+    cookiePopup.style.display = 'block';
   }
 
-  $("#cookie-popup button").click(function() {
+  // Get the button inside the cookie popup
+  var cookieButton = document.querySelector('#cookie-popup button');
+  
+  // Add a click event listener to the button
+  cookieButton.addEventListener('click', function() {
     // Set a session cookie to remember the user's choice
     document.cookie = 'cookiePolicyAccepted=true; path=/';
     
     // Hide the cookie policy popup
-    $("#cookie-popup").fadeOut();
+    var cookiePopup = document.getElementById('cookie-popup');
+    cookiePopup.style.display = 'none';
   });
 });
 
-/* SEND FORM */
-$(document).ready(function() {
-  $('#contact-form').submit(function(e) {
-      e.preventDefault();
-      
-      $.ajax({
-          type: "POST",
-          url: $(this).attr('action'),
-          data: $(this).serialize(),
-          success: function(response) {
-              // Handle success (display a thank you message, for example)
-              console.log(response); // Log the response from the server
-          },
-          error: function(xhr, status, error) {
-              // Handle error
-              console.error(error);
-          }
-      });
+// SEND FORM
+document.addEventListener('DOMContentLoaded', function() {
+  var contactForm = document.getElementById('contact-form');
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var formData = new FormData(contactForm);
+    var xhr = new XMLHttpRequest();
+    
+    xhr.open('POST', contactForm.getAttribute('action'), true);
+    
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        // Handle success (display a thank you message, for example)
+        console.log(xhr.responseText); // Log the response from the server
+      } else {
+        // Handle error
+        console.error('An error occurred:', xhr.statusText);
+      }
+    };
+    
+    xhr.onerror = function() {
+      // Handle network error
+      console.error('Network error occurred');
+    };
+    
+    xhr.send(formData);
   });
 });
 
-/* Max number of words */
+// Max number of words
 document.addEventListener('DOMContentLoaded', function() {
   // Get all elements with the class "article"
   const articles = document.querySelectorAll('.article-body');
@@ -95,4 +111,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-

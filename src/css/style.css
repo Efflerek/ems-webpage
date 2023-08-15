@@ -966,11 +966,15 @@ textarea:focus {
 
 /*Contact page*/
 /*Consultation-form*/
-.normal-div.blue.consultation-div.form {
+
+.normal-div.blue.consultation-div {
   display: flex;
   height: 45rem;
   max-height: 55rem;
   justify-content: space-between;
+  padding: 5rem 0 0 0;
+}
+.normal-div.blue.consultation-div.form {
   padding: 5rem 0 0 0;
 }
 
