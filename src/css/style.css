@@ -255,6 +255,11 @@ nav.open {
   height: 33rem;
 }
 
+.diagonal.index {
+padding-top: 5rem;
+height: 35rem;
+}
+
 .diagonal.shop {
   padding: 5rem 0;
   margin-bottom: 5rem;
@@ -356,6 +361,11 @@ nav.open {
   justify-content: space-around;
   align-items: center;
   padding: 3rem 0;
+}
+
+.normal-div.offers {
+  margin: 1rem 0rem 0 0;
+  height: 40rem;
 }
 
 .normal-div.blue {
