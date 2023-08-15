@@ -24,29 +24,37 @@
 
     <header>
 
-        <div class="top-menu">
+              <div class="top-menu">
             <div class="menu-wrapper">
-                <svg class="bla" viewBox="0 0 50 50" width="50px" height="40px">
-                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-menu"></use>
+              <div class="menu-toggle">
+                <svg viewBox="0 0 50 50" width="30px" height="30px">
+                  <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-menu"></use>
                 </svg>
-                <h1 class="logo"><a href="#">Easy Motion</a></h1>
+              </div>
+              <img src="/src/images/ems-logo.png" href="index.html" alt="EasyMotion Skin" class="logo">
             </div>
-
+        
             <div class="nav-wrapper">
-                <nav>
-                    <ul>
-                        <li><a href="how-ems-works.html">How it works?</a></li>
-                        <li><a href="ems-suit-shop.html">Shop</a></li>
-                        <li><a href="home-edition.html">Home Edition</a></li>
-                        <li><a href="ems-blog.html">Blog</a></li>
-                        <li><a href="contact.html">Support</a></li>
-                    </ul>
-                </nav>
-                <div class="actions">
-                    <a href="#" class="sign-up">Free Consultation</a>
-                </div>
+              <nav>
+                <ul>
+                  <li><a href="how-ems-works.html">How it works?</a></li>
+                  <li><a href="ems-suit-shop.html">Shop</a></li>
+                  <li><a href="home-edition.html">Home Edition</a></li>
+                  <li><a href="ems-blog.html">Blog</a></li>
+                  <li><a href="contact.html">Support</a></li>
+                </ul>
+              </nav>
+              <div class="actions menu-actions">
+                <a href="#" class="sign-up">Free Consultation</a>
+              </div>
+              <div class="switch">
+                <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                <label for="language-toggle"></label>
+                <span class="off">IS</span>
+                <span class="on">EN</span>
+              </div>
             </div>
-        </div>
+          </div>
 
     </header>
     <div class="normal-div blue consultation-div">
@@ -62,12 +70,6 @@
             <div class="actions">
                 <a href="#" class="sign-up">Read More</a>
             </div>
-            <div class="switch">
-                <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
-                <label for="language-toggle"></label>
-                <span class="off">IS</span>
-                <span class="on">EN</span>
-              </div>
         </div>
 
         <div class="right-content welcome-he">
@@ -179,7 +181,7 @@
     </div>
 
     <div></div>
-    <div id="Contact Welcome" class="normal-div blue consultation-div">
+    <div id="Contact Welcome" class="normal-div blue consultation-div home">
         <div class="get-consultation">
             <div class="consultation-form">
                 <h2>Contact Us</h2>
