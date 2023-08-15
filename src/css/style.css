@@ -429,6 +429,10 @@ height: 35rem;
 @media (min-width: 28.125rem) {
   .top-menu {
     flex-direction: row;
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    top: 0;
   }
 }
 
