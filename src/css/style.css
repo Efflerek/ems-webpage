@@ -1281,14 +1281,23 @@ textarea:focus {
 .row-div {
   height: 30rem;
   margin: 1rem 0rem 2rem;
-
 }
 
-.article {
+.row-div.shop {
+  height: 25rem;
+}
+
+.article .element-shop {
   margin: 0rem 1rem 1rem 1rem;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 31%;
+}
+
+.element-shop {
+  margin: 0rem 1rem 1rem 1rem;
+  background-color: #fff;
   width: 31%;
 }
 
