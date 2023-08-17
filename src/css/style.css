@@ -461,16 +461,14 @@ header {
 
 .benefits,
 .elements {
-  padding-top: 3rem;
-  margin: 1rem;
+  padding-top: 1rem;
   margin-left: 2rem;
   margin-right: 2rem;
+  margin-bottom: 1rem;
 }
 
-.elements {
-  display: flex;
-  margin-bottom: 1rem;
-  padding-top: 1rem;
+.elements.home-edition {
+  height: 35rem;
 }
 
 .benefits-headline,
@@ -1270,11 +1268,10 @@ textarea:focus {
 }
 
 .box {
-  height: 26rem;
+  height: 30rem;
   display: flex;
   padding-top: 0;
-  margin-top: 0;
-  margin-bottom: 3rem;
+  margin: 1rem 0 2rem;
   flex-direction: row;
 }
 
@@ -1316,6 +1313,7 @@ textarea:focus {
 }
 
 .article-header img {
+  flex: 1;
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -1341,6 +1339,7 @@ textarea:focus {
 }
 
 .article-body {
+  flex: 2;
   padding: 1rem;
 }
 
