@@ -31,7 +31,7 @@
                   <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-menu"></use>
                 </svg>
               </div>
-              <img src="/src/images/ems-logo.png" href="index.html" alt="EasyMotion Skin" class="logo">
+              <a href="index.html"><img src="/src/images/ems-logo.png" alt="EasyMotion Skin" class="logo"></a>
             </div>
         
             <div class="nav-wrapper">
@@ -45,7 +45,7 @@
                 </ul>
               </nav>
               <div class="actions menu-actions">
-                <a href="#" class="sign-up">Free Consultation</a>
+                <a id="openModalBtn" class="sign-up">Free Consultation</a>
               </div>
               <div class="switch">
                 <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
@@ -56,6 +56,29 @@
             </div>
           </div>
     </header>
+    
+    <div id="modalform" class="modal">
+        <div class="modal-content consultation-form">
+            <span class="close">&times;</span>
+            <h2>Contact Us</h2>
+            <p>Do You have questions about EMS Suit? You want to see the EasyMotionSkin in action? If the answer is yes, feel free to leave Your data. We will contact You in the next 2 days. </p>
+            <form class="contact-form" action="getconsultation.php" method="post">
+                <div class="form-floating">
+                    <input type="text" id="name" placeholder=" " required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-floating">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-floating">
+                    <input type="tel" id="phone" placeholder=" " required>
+                    <label for="phone">Phone Number</label>
+                </div>
+                <button class="cons-sub" type="submit">Get Consultation</button>
+            </form>
+        </div>
+    </div>
     
     <div class="ems-blog-div bckg blue">
         <div class="blog-grid-headline white">
@@ -245,7 +268,7 @@
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <form style="form" action="#">
+                <form style="form" action="sendform.php" method="post">
                     <p class="text white">*Required</p>
                     <input type="text" placeholder="Name *" />
                     <input type="email" placeholder="Email *" />
@@ -292,8 +315,18 @@
         <button class="cookie-popup__button">OK</button>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div id="ModalForm" class="modal">
+
+        <!-- Modal content -->
+        <div class="modalForm-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="js/script.js"></script>
     <script src="js/script.js"></script>
 </body>
 

@@ -27,38 +27,60 @@
 
         <div class="top-menu">
             <div class="menu-wrapper">
-              <div class="menu-toggle">
-                <svg viewBox="0 0 50 50" width="30px" height="30px">
-                  <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-menu"></use>
-                </svg>
-              </div>
-              <img src="/src/images/ems-logo.png" href="index.html" alt="EasyMotion Skin" class="logo">
+                <div class="menu-toggle">
+                    <svg viewBox="0 0 50 50" width="30px" height="30px">
+                        <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-menu"></use>
+                    </svg>
+                </div>
+                <a href="index.html"><img src="/src/images/ems-logo.png" alt="EasyMotion Skin" class="logo"></a>
             </div>
-        
+
             <div class="nav-wrapper">
-              <nav>
-                <ul>
-                  <li><a href="how-ems-works.html">How it works?</a></li>
-                  <li><a href="ems-suit-shop.html">Shop</a></li>
-                  <li><a href="home-edition.html">Home Edition</a></li>
-                  <li><a href="ems-blog.html">Blog</a></li>
-                  <li><a href="contact.html">Support</a></li>
-                </ul>
-              </nav>
-              <div class="actions menu-actions">
-                <a href="#" class="sign-up">Free Consultation</a>
-              </div>
-              <div class="switch">
-                <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
-                <label for="language-toggle"></label>
-                <span class="off">IS</span>
-                <span class="on">EN</span>
-              </div>
+                <nav>
+                    <ul>
+                        <li><a href="how-ems-works.html">How it works?</a></li>
+                        <li><a href="ems-suit-shop.html">Shop</a></li>
+                        <li><a href="home-edition.html">Home Edition</a></li>
+                        <li><a href="ems-blog.html">Blog</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </nav>
+                <div class="actions menu-actions">
+                    <a id="openModalBtn" class="sign-up">Free Consultation</a>
+                </div>
+                <div class="switch">
+                    <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                    <label for="language-toggle"></label>
+                    <span class="off">IS</span>
+                    <span class="on">EN</span>
+                </div>
             </div>
-          </div>
+        </div>
 
     </header>
 
+    <div id="modalform" class="modal">
+        <div class="modal-content consultation-form">
+            <span class="close">&times;</span>
+            <h2>Contact Us</h2>
+            <p>Do You have questions about EMS Suit? You want to see the EasyMotionSkin in action? If the answer is yes, feel free to leave Your data. We will contact You in the next 2 days. </p>
+            <form class="contact-form" action="getconsultation.php" method="post">
+                <div class="form-floating">
+                    <input type="text" id="name" placeholder=" " required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-floating">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-floating">
+                    <input type="tel" id="phone" placeholder=" " required>
+                    <label for="phone">Phone Number</label>
+                </div>
+                <button class="cons-sub" type="submit">Get Consultation</button>
+            </form>
+        </div>
+    </div>
 
     <div id="Welcome" class="diagonal index">
         <div class="left-content">
@@ -374,7 +396,7 @@
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <form style="form" action="#">
+                <form style="form" action="sendform.php" method="post">
                     <p class="text white">*Required</p>
                     <input type="text" placeholder="Name *" />
                     <input type="email" placeholder="Email *" />
@@ -423,7 +445,15 @@
         <button class="cookie-popup__button">OK</button>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <div id="modalForm" class="modal">
+
+        <!-- Modal content -->
+        <div class="modalForm-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
 
