@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const openModalBtn = document.getElementById("openModalBtn");
+  const openModalBtns = document.querySelectorAll('.sign-up.free-consultation');
   const modal = document.getElementById("modalform");
   const closeModal = document.getElementsByClassName("close")[0];
+
+ openModalBtns.forEach(openModalBtn => {
 
   openModalBtn.onclick = function () {
       modal.style.display = "flex";
   }
+});
 
   closeModal.onclick = function () {
       modal.style.display = "none";
