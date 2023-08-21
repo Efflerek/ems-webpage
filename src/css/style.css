@@ -1721,6 +1721,7 @@ input.check-toggle-round-flat:checked+label:after {
 .close {
   color: #aaa;
   float: right;
+  cursor: pointer;
   font-size: 28px;
   font-weight: bold;
 }

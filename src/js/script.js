@@ -3,22 +3,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById("modalform");
   const closeModal = document.getElementsByClassName("close")[0];
 
- openModalBtns.forEach(openModalBtn => {
-
-  openModalBtn.onclick = function () {
+  openModalBtns.forEach(openModalBtn => {
+    openModalBtn.onclick = function () {
       modal.style.display = "flex";
-  }
-});
+    };
+  });
 
   closeModal.onclick = function () {
-      modal.style.display = "none";
-  }
+    modal.style.display = "none";
+  };
 
   window.onclick = function (event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
   };
+
 
   // MENU WRAPPER
   // Get the SVG and dropdown elements
