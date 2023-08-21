@@ -1777,3 +1777,41 @@ input.check-toggle-round-flat:checked+label:after {
     max-width: 100%;
   }
 }
+
+/*How it works styles*/
+.grid-colored-boxes {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+}
+
+.colored-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease; /* Adding transition for a smooth effect */
+}
+
+.colored-box.white, .colored-box-content.white {
+  background: white;
+}
+
+.colored-box-content {
+  display: flex;
+  flex-direction: column; /* Display content in a column direction */
+  align-items: center;
+}
+
+.blue-box {
+  background-color: #4D77FF;
+}
+
+.left-box,
+.right-box {
+  background-color: #4D77FF;
+}
+
+.colored-box:hover {
+  transform: translateY(-5px) scale(1.05);

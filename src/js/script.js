@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (event.target == modal) {
           modal.style.display = "none";
       }
-  }
+  };
 
   // MENU WRAPPER
   // Get the SVG and dropdown elements
