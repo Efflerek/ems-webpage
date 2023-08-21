@@ -108,6 +108,15 @@ h2.white {
   width: 100%;
 }
 
+.readmore .sign-up {
+  display: inline-block;
+  background: linear-gradient(to right, #b33e96, #f3854e);
+  border-radius: 1.25rem;
+  margin: 1rem 1rem;
+  padding: 0.5rem 0.5rem;
+  box-shadow: 0 0.0625rem 0.1875rem #2e2e2e;
+}
+
 @media (min-width: 59.375rem) {
   .actions {
     text-align: initial;
@@ -1341,7 +1350,7 @@ textarea:focus {
 
 .article-body {
   flex: 2;
-  padding: 1rem;
+  padding: 1rem 0rem 1rem 1rem;
 }
 
 .article-body p {
@@ -1395,6 +1404,10 @@ textarea:focus {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.right-content.welcome-he.welcome-how{
+  background-image: url("/src/images/how-it-works-ems.jpg");
 }
 
 .app-div {
@@ -1788,14 +1801,19 @@ input.check-toggle-round-flat:checked+label:after {
 }
 
 .colored-box {
+  padding: 1rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease; /* Adding transition for a smooth effect */
+  transition: transform 0.5s ease; /* Adding transition for a smooth effect */
 }
 
 .colored-box.white, .colored-box-content.white {
-  background: white;
+}
+
+.colored-box-content.white img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .colored-box-content {
@@ -1814,4 +1832,19 @@ input.check-toggle-round-flat:checked+label:after {
 }
 
 .colored-box:hover {
-  transform: translateY(-5px) scale(1.05);
+  transform: translateY(-6px) scale(1.05);
+}
+
+.how-it-works {
+  display: flex;
+  flex-direction: row;
+}
+.p-margin {
+  flex: 1;
+  margin-right: 2.5rem;
+}
+
+.image-hiw img {
+  flex: 2;
+  height: 30rem;
+}
