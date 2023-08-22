@@ -1086,6 +1086,11 @@ textarea:focus {
   padding: 1rem 0rem;
 }
 
+#img-blog-slider {
+  width: 43%;
+  height: auto;
+}
+
 .align {
   display: block;
   margin-top: 1rem;
