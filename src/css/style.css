@@ -1034,8 +1034,27 @@ textarea:focus {
 
 
 .normal-div.blue.tabs-div {
-  display: absolute;
   max-height: 9rem;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs-div.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.tabcard.tab-contact.shop-site1 {
+  flex: 1;
+  margin: 1rem 0.5rem;
+  border-radius: 1.5rem;
+}
+
+.tabcard.tab-contact.shop-site {
+  flex: 2;
+  margin: 1rem 0.5rem;
+  border-radius: 1.5rem;
+
 }
 
 .get-consultation {
@@ -1058,6 +1077,13 @@ textarea:focus {
   /* Optionally, center the text horizontally */
   padding: 1rem 3rem;
   font-size: 110%;
+}
+
+.get-consultation-text.flex {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  padding: 1rem 0rem;
 }
 
 .align {
