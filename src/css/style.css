@@ -43,6 +43,12 @@ h2.white {
   max-height: 3rem;
 }
 
+.model3D {
+  margin-left: 2rem;
+  width: 33rem;
+  height: 33rem;
+}
+
 /* Actions */
 
 .button-white {
@@ -154,103 +160,143 @@ h2.white {
   }
 }
 
-/* List Items */
-li {
-  display: inline-block;
-}
+/* Top Menu */
 
-li a {
-  text-transform: capitalize;
-  line-height: 6.25rem;
-  padding: 0 0.75rem;
-  position: relative;
-}
-
-li a::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(rgba(255, 255, 255, 0.3), transparent 85%, transparent);
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
-li a:hover::after {
-  opacity: 1;
-}
-
-/* Navigation */
-nav {
-  display: none;
-}
-
-@media (min-width: 59.375rem) {
-  nav {
-    display: block;
-  }
-}
-
-/* Nav Wrapper */
-.nav-wrapper {
+.top-menu {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: 50px;
-  /* Example height value */
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
 }
 
-/* Show the dropdown menu when the show-menu class is added */
-.show-menu {
-  display: block;
-}
 
 .menu-wrapper {
   display: flex;
   align-items: center;
 }
 
-svg {
+/* Navigation Wrapper */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin-right: 2rem;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #DC052D;
+}
+
+.actions {
+  margin-left: auto;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.switch label {
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.menu-bar {
+  cursor: pointer;
+  color: #fff;
+}
+
+/*MENU-MOBILE - RESPONSIVE */
+@media only screen 
+and (max-width : 600px) {
+
+#top-menu {
+  z-index: 7;
+   /* Add position relative to the top-menu */
+  }
+
+#nav-menu {
+  z-index: 8;
+  transition: 0.3s ease;
   display: none;
 }
 
-@media (max-width: 59.375rem) {
-  svg {
-    position: absolute;
-    left: 1.5rem;
-    top: 2.12rem;
-    display: inline-block;
-    padding-right: 1.25rem;
-    fill: #fff;
-    cursor: pointer;
-  }
+nav ul {
+  padding: 0 22px;
+  flex-direction: column; /* Ustaw kierunek kolumny */
+  align-items: center; /* Wyśrodkuj w pionie */
+  margin: 0; /* Wyzeruj marginesy */
 }
 
-nav.open {
+nav li {
+  list-style: none;
+  margin: 0; /* Wyzeruj marginesy */
+  padding: 1rem 0; /* Dodaj odstępy w pionie */
+}
+
+nav li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  font-weight: bold;
+}
+
+#menu-bar {
+  z-index: 9;
+  display: block;
+}
+.menu-bg {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  margin: 30px 0 20px 20px;
+  background: linear-gradient(to right, #b33e96, #f3854e);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.change {
   display: block;
 }
 
-@media (max-width: 59.375rem) {
-  nav.open ul {
-    background: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 3.1rem 1.8rem;
-  }
+#nav-menu.change {
+  display: block;
+  position: absolute; /* Ustaw pozycję absolutną */
+  top: 100%; /* Przesuń menu do dołu top-menu */
+  left: 0; /* Wyrównaj do lewej strony */
+  width: 50%; /* Szerokość 100% ekranu */
+  flex-direction: column; /* Ustaw kierunek kolumny */
+  z-index: 10; /* Ensure that nav-menu appears on top */
+}
 
-  nav.open li {
-    display: block;
-    border-bottom: 0.06rem solid #ccc;
-  }
-
-  nav.open li a {
-    width: 100%;
-    line-height: 4.3rem;
-  }
+.change-bg {
+  width: 60rem;
+  height: 50rem;
+  transform: translate(-60%,-30%);
+  z-index: 5;
 }
 
 .model3D {
@@ -258,6 +304,7 @@ nav.open {
   width: 33rem;
   height: 33rem;
 }
+} 
 
 /* Diagonals */
 .diagonal {
@@ -1735,7 +1782,7 @@ input.check-toggle-round-flat:checked+label:after {
 /*CONTENT MODAL */
 
 .modal {
-  z-index: 200000;
+  z-index: 5;
   position: fixed;
   top: 0;
   left: 0;
@@ -1772,7 +1819,7 @@ input.check-toggle-round-flat:checked+label:after {
 /*Cookies*/
 #cookie-popup {
   position: fixed;
-  z-index: 9999;
+  z-index: 6;
   right: 30px;
   bottom: 30px;
   width: 330px;
@@ -1857,9 +1904,6 @@ input.check-toggle-round-flat:checked+label:after {
   justify-content: center;
   align-items: center;
   transition: transform 0.5s ease; /* Adding transition for a smooth effect */
-}
-
-.colored-box.white, .colored-box-content.white {
 }
 
 .colored-box-content.white img {

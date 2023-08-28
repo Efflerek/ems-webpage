@@ -20,16 +20,14 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
 
-  // MENU WRAPPER
-  // Get the SVG and dropdown elements
-  const svgIcon = document.querySelector('.bla');
-  const dropdownMenu = document.querySelector('.nav-wrapper');
+  function toggleMenu() {
+    document.getElementById("menu-bar").classList.toggle("change");
+    document.getElementById("nav-menu").classList.toggle("change");
+    document.getElementById("menu-bg").classList.toggle("change-bg");
+  }
 
-  // Add a click event listener to the SVG icon
-  svgIcon.addEventListener('click', function () {
-    // Toggle the visibility of the dropdown menu
-    dropdownMenu.classList.toggle('show-menu');
-  });
+  const menuBar = document.querySelector('.menu-bar');
+  menuBar.addEventListener('click', toggleMenu);
 
   // MODEL 3D
   // Find all occurrences of the Model Viewer component on the page
