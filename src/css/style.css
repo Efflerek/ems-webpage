@@ -2198,7 +2198,6 @@ input.check-toggle-round-flat:checked+label:after {
   }
 }
 
-/* Media Queries */
 @media (max-width: 820px) {
   .normal-div .article {
     max-width: 100%;
@@ -2271,10 +2270,6 @@ input.check-toggle-round-flat:checked+label:after {
 
 @media screen and (min-width: 821px, max-width: 1000px) {
 
-  #hiw-consultation-text {
-    display: none;
-  }
-
   #hiw-grid-blog {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -2284,17 +2279,21 @@ input.check-toggle-round-flat:checked+label:after {
 }
 
 @media screen and (max-width: 820px) {
-  .normal-div.blue.consultation-div {
+  .normal-div.blue.consultation-div, .hiw-welcome-div, .he-welcome-div {
     justify-content: center;
     align-items: center;
     text-align: center;
     height: auto;
     margin: 0 0 0 0;
-    padding: 3rem 0 0 0;
+    padding: 7rem 0 0 0;
   }
 
   #hiw-left-content {
     text-align: center;
+  }
+
+  .hiw-right-content, .he-right-content {
+    display: none;
   }
 
   .image-hiw img {
