@@ -1708,6 +1708,17 @@ textarea:focus {
   margin: 0 1rem 3rem 1rem;
 }
 
+@media (min-width: 821px) and (max-width: 1200px) {
+  .grid.blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 820px) {
+  .grid.blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 .blog-grid-headline {
   margin-top: 3rem;
