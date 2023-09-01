@@ -1408,7 +1408,7 @@ textarea:focus {
 .ems-blog-div.bckg.blue {
   display: flex;
   flex-direction: column;
-  max-height: 40rem;
+  height: auto;
   margin-top: 0;
   padding: 2rem 0 0 0;
 }
@@ -1813,6 +1813,16 @@ textarea:focus {
   width: 70%;
 }
 
+@media screen and (max-width: 820px) {
+  .article-body.flex, .article-body.flex p {
+    margin-left: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+}
+
 .tag {
   background-color: #2F80ED;
   color: #fff;
@@ -1855,6 +1865,19 @@ textarea:focus {
 .blog-text {
   padding: 5rem 20rem;
   line-height: 1.6rem;
+}
+
+@media (max-width: 820px) {
+  #welcome-blog {
+      flex-direction: column-reverse;
+      justify-content: center; /* Display columns in reverse order on mobile */
+  }
+  #img-blog-slider {
+      order: 2; /* Change the order of the image to be displayed after the article body */
+      justify-content: center;
+      margin: 0 auto;
+      width: 100%;
+    }
 }
 
 /* Home Edition Styles */
