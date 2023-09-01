@@ -331,9 +331,9 @@ nav a:hover {
 .diagonal.index {
   padding-top: 5rem;
   height: 35rem;
+  margin-bottom: 3rem;
 
 }
-
 .diagonal.shop {
   padding: 5rem 0 0 0;
   margin-bottom: 5rem;
@@ -344,6 +344,11 @@ nav a:hover {
     padding: 7rem 0 0 0;
     justify-content: center;
   }
+
+  .diagonal.index .right-content {
+    display: none;
+  }
+  
 }
 
 .diagonal:nth-child(4),
