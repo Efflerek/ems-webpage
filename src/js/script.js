@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // W przeciwnym razie, dodaj końcówkę "-is.html" do nazwy strony
       newPageName = currentPageName.replace('.html', '-is.html');
     }
-    
+
      // Opóźnij przekierowanie o 1 sekundę
      setTimeout(function() {
       // Buduj nowy URL na podstawie nazw stron
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
       
       // Przekieruj użytkownika na nową stronę
       window.location.href = newURL;
-    }, 1000); // 1000 milisekund (1 sekunda)
+    }, 200); // 200 milisekund (0,2 sekundy)
   });
 
   // MODEL 3D
