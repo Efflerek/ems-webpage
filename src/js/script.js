@@ -29,6 +29,25 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuBar = document.querySelector('.menu-bar');
   menuBar.addEventListener('click', toggleMenu);
 
+
+
+  // SWITCHER JĘZYKOWY //
+  const switcher = document.getElementById('language-toggle');
+    
+  switcher.addEventListener('change', function () {
+    // Pobierz nazwę aktualnej strony
+    const currentPageName = window.location.pathname.split('/').pop();
+    
+    // Utwórz nazwę strony w innej wersji językowej
+    const newPageName = currentPageName.replace('.html', '-is.html');
+    
+    // Zbuduj nowy URL na podstawie nazwy strony
+    const newURL = window.location.origin + window.location.pathname.replace(currentPageName, newPageName);
+    
+    // Przekieruj użytkownika na nową stronę
+    window.location.href = newURL;
+  });
+
   // MODEL 3D
   // Find all occurrences of the Model Viewer component on the page
   const modelViewers = document.querySelectorAll('model-viewer');
