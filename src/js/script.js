@@ -48,11 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
       newPageName = currentPageName.replace('.html', '-is.html');
     }
     
-    // Buduj nowy URL na podstawie nazw stron
-    const newURL = window.location.origin + window.location.pathname.replace(currentPageName, newPageName);
-    
-    // Przekieruj użytkownika na nową stronę
-    window.location.href = newURL;
+     // Opóźnij przekierowanie o 1 sekundę
+     setTimeout(function() {
+      // Buduj nowy URL na podstawie nazw stron
+      const newURL = window.location.origin + window.location.pathname.replace(currentPageName, newPageName);
+      
+      // Przekieruj użytkownika na nową stronę
+      window.location.href = newURL;
+    }, 1000); // 1000 milisekund (1 sekunda)
   });
 
   // MODEL 3D
