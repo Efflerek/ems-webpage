@@ -37,11 +37,18 @@ document.addEventListener('DOMContentLoaded', function () {
   switcher.addEventListener('change', function () {
     // Pobierz nazwę aktualnej strony
     const currentPageName = window.location.pathname.split('/').pop();
+    let newPageName; // Deklarujemy zmienną poza blokami if/else
     
-    // Utwórz nazwę strony w innej wersji językowej
-    const newPageName = currentPageName.replace('.html', '-is.html');
+    // Sprawdź, czy strona jest już w formacie "-is.html"
+    if (currentPageName.endsWith('-is.html')) {
+      // Jeśli tak, usuń końcówkę "-is.html" z nazwy strony
+      newPageName = currentPageName.replace('-is.html', '.html');
+    } else {
+      // W przeciwnym razie, dodaj końcówkę "-is.html" do nazwy strony
+      newPageName = currentPageName.replace('.html', '-is.html');
+    }
     
-    // Zbuduj nowy URL na podstawie nazwy strony
+    // Buduj nowy URL na podstawie nazw stron
     const newURL = window.location.origin + window.location.pathname.replace(currentPageName, newPageName);
     
     // Przekieruj użytkownika na nową stronę
