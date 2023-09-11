@@ -107,13 +107,10 @@ h2.white {
 }
 
 
-.signup.submit {
-  width: 4rem;
-}
 
 .actions .sign-up {
   display: inline-block;
-  justify-content: left;
+  float: left;
   background: linear-gradient(to right, #b33e96, #f3854e);
   border-radius: 1.25rem;
   padding: 0.5rem 1rem;
@@ -2470,6 +2467,9 @@ input.check-toggle-round-flat:checked+label:after {
 }
 
 @media screen and (min-width: 821px, max-width: 1000px) {
+  #ContactTabs {
+    display: none;
+  }
 
   #hiw-grid-blog {
     display: grid;
@@ -2498,7 +2498,9 @@ input.check-toggle-round-flat:checked+label:after {
 }
 
 @media screen and (max-width: 820px) {
-
+  #ContactTabs {
+    display: none;
+  }
   #img-muscles {
     justify-content: center;
     margin: 0 auto;
